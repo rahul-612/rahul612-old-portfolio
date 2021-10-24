@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
+import {useHistory} from 'react-router-dom';
+import useOnScreen from '../utility/observer'
 import "./contact.css"
 import '../utility/observer.js'
-import useOnScreen from '../utility/observer'
 import isActive from '../utility/isActive';
-import {useHistory} from 'react-router-dom';
 
 const contact = () => {
     const history=useHistory();
