@@ -6,11 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server/ -e .js",
-    "build":"cd client && npm run build",
-    "heroku-postbuild":"npm run install-client && npm run build",
-    "install-client":"cd client && npm install",
-    "start":"node app.js",
-    "client":"cd client && npm start"
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "install-client": "cd client && npm install",
+    "start": "node app.js",
+    "client": "cd client && npm start"
   },
   "keywords": [],
   "author": "Rahul",
@@ -21,6 +21,7 @@
     "heroku": "^7.59.0",
     "mongoose": "^6.0.11",
     "nodemon": "^2.0.13",
-    "react-router-dom": "^5.3.0"
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "^4.0.3"
   }
 }

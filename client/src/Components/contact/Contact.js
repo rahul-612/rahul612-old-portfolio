@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import {useHistory} from 'react-router-dom';
-import useOnScreen from '../utility/observer'
-import "./contact.css"
-import '../utility/observer.js'
+import useOnScreen from '../utility/observer';
+import "./contact.css";
+import '../utility/observer.js';
 import isActive from '../utility/isActive';
 
 const contact = () => {
