@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import {useHistory} from 'react-router-dom';
-import useOnScreen from '../utility/observer';
+// import React, { useState } from 'react';
+// import {useHistory} from 'react-router-dom';
+// import useOnScreen from '../utility/observer';
 import "./contact.css";
 import '../utility/observer.js';
 import isActive from '../utility/isActive';
