@@ -93,7 +93,7 @@ const contact = () => {
                         <input type="submit" name="" value="Submit" onClick={sendData} />
                     </form>
                 </div>
-                <div className="alert flex">
+                <div className="alert fade-in flex">
                     <button>
                         <i className="fas fa-times" onClick={alertFade}></i>
                     </button>
