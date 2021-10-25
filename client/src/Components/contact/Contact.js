@@ -1,59 +1,66 @@
-import React, { useState } from 'react';
-import {useHistory} from 'react-router-dom';
-import useOnScreen from '../utility/observer';
-import "./contact.css";
-import '../utility/observer.js';
+import React, { useState } from 'react'
+import "./contact.css"
+import '../utility/observer.js'
+import useOnScreen from '../utility/observer'
 import isActive from '../utility/isActive';
+import { useHistory } from 'react-router-dom';
 
 const contact = () => {
-    const history=useHistory();
-    const [setRef,visible]=useOnScreen({threshold:0.2,triggerOnce:true});
-    const [fdata,setFdata]=useState({
-        name:"",
-        email:"",
-        msg:""
+    const history = useHistory();
+    const [alert,setAlert]=useState(false)
+    const [setRef, visible] = useOnScreen({ threshold: 0.2, triggerOnce: true });
+    const [fdata, setFdata] = useState({
+        name: "",
+        email: "",
+        msg: ""
     });
 
-    let name,value;
+    let name, value;
 
-    const inputEvent=(e)=>{
-        name=e.target.name;
-        value=e.target.value;
+    const inputEvent = (e) => {
+        name = e.target.name;
+        value = e.target.value;
 
-        setFdata({...fdata,[name]:value})
+        setFdata({ ...fdata, [name]: value })
     }
 
-    const sendData=async (e)=>{
+    const sendData = async (e) => {
         // event.preventDefault();
         // alert(`${fdata.name} ${fdata.email} ${fdata.email}`);
 
         e.preventDefault();
-        const {name,email,msg}=fdata;
+        const { name, email, msg } = fdata;
 
-        const res=await fetch("/contact",{
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json"
+        const res = await fetch("/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
             },
-            body:JSON.stringify({name,email,msg})
+            body: JSON.stringify({ name, email, msg })
         });
 
-        const data=await res.json();
+        const data = await res.json();
 
-        if(data.status===422||!data){
-            window.alert("Please Try Again!");
+        if (data.status === 422 || !data) {
+            // window.alert("Please Try Again!");
+            setAlert(false)
+            alertShow();
+            setTimeout(function(){ alertFade() }, 4000);
             console.log("Please Try Again!");
-        }else{
-            window.alert("Message Sent Successfull");
+        } else {
+            // window.alert("Message Sent Successfull");
+            setAlert(true)
+            alertShow();
+            setTimeout(function(){ alertFade() }, 4000);
             console.log("Message Sent Successfull");
 
             history.push('/')
         }
 
         setFdata({
-            name:"",
-            email:"",
-            msg:""
+            name: "",
+            email: "",
+            msg: ""
         })
     }
 
@@ -66,9 +73,9 @@ const contact = () => {
                         <path d="M1200 0L0 0 598.97 114.72 1200 0z" className="shape-fill"></path>
                     </svg>
                 </div>
-                <div className={visible?"contact_head h_ani appear fade-in":"contact_head fade-in"} ref={setRef}>contact {visible?isActive(visible,'contactNavItem'):null}</div>
+                <div className={visible ? "contact_head h_ani appear fade-in" : "contact_head fade-in"} ref={setRef}>contact {visible ? isActive(visible, 'contactNavItem') : null}</div>
 
-                <div className={visible?"contact_box appear fade-in":"contact_box fade-in"} ref={setRef}>
+                <div className={visible ? "contact_box appear fade-in" : "contact_box fade-in"} ref={setRef}>
                     <form method="POST">
                         <div className="inputBox">
                             <input type="text" name='name' autoComplete="off" value={fdata.name} onChange={inputEvent} required />
@@ -80,15 +87,29 @@ const contact = () => {
                             <label htmlFor="email">email</label>
                         </div>
                         <div className="inputBox">
-                            <textarea name="msg"  cols="71" rows="8" value={fdata.msg} onChange={inputEvent} autoComplete="off" required></textarea>
+                            <textarea name="msg" cols="71" rows="8" value={fdata.msg} onChange={inputEvent} autoComplete="off" required></textarea>
                             <label htmlFor="msg">Message</label>
                         </div>
-                        <input type="submit" name="" value="Submit" onClick={sendData}/>
+                        <input type="submit" name="" value="Submit" onClick={sendData} />
                     </form>
+                </div>
+                <div className="alert flex">
+                    <button>
+                        <i className="fas fa-times" onClick={alertFade}></i>
+                    </button>
+                    <h2>{alert?'Sent Successfully':'Something went wrong'}</h2>
+                    {alert?<i className="far fa-2x success fa-check-circle"></i>:<i class="far fa-2x fail fa-times-circle"></i>}
                 </div>
             </section>
         </>
     )
+}
+
+const alertFade = () => {
+    document.querySelector('.alert').classList.add('fade-in')
+}
+const alertShow = () => {
+    document.querySelector('.alert').classList.remove('fade-in')
 }
 
 export default contact;
