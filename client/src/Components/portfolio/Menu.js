@@ -35,7 +35,7 @@ const Menu = [
         id: i++,
         image:mi_clone,
         name:"Mi Store Clone",
-        category: "MERN",
+        category: "ReactJS",
         url:"https://mi-store-react-clone.netlify.app/"
     },
     {
