@@ -85,6 +85,7 @@
     color: #fff;
     transition: 0.5s;
     text-transform: capitalize;
+    z-index: -1;
 }   
 
 .contact_box input[type="submit"]{
@@ -180,7 +181,7 @@
         top: 20rem;
     }
     .alert button{
-        bottom: 9rem;
+        bottom: 10rem;
         left: 20rem;
     }
 }

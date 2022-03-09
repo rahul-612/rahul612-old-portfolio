@@ -14,8 +14,8 @@ export const Home = () => {
             <header id="home" className="home">
                <div className="heading" ref={setRef}>
                {visible?isActive(visible,'homeNavItem'):null}
-                   <h1>Hello, I am <span>Rahul Kumar</span>.</h1>
-                   <h1>I'm a full-stack web developer.</h1>
+                   <h1>Hello, I am Rahul Kumar.</h1>
+                   <h1>I'm a <span className='roleText'></span> </h1>
                    <a href='#about' className="h_btn">view my work    <i className="fas fa-arrow-down"></i><i className="fas fa-arrow-right"></i></a>
                </div>
             </header>

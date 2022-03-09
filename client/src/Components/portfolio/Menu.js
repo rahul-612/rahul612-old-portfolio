@@ -18,17 +18,25 @@ import todo from '../portfolio/imgs/todo.jpg';
 import weather_app from '../portfolio/imgs/weather_app.jpg';
 import basic_mern from '../portfolio/imgs/basic-mern.jpg';
 import restful_api from './imgs/restful_api.jpg';
-
+import ecomm from "./imgs/ecomm.jpg";
+import mi_clone from "./imgs/mi_clone.jpg"
 
 let i=1;
 
 const Menu = [
     {
         id: i++,
-        image:basic_mern,
-        name:"Basic MERN App",
+        image:ecomm,
+        name:"Ecommerce",
         category: "MERN",
-        url:"https://mern-basic-app.herokuapp.com/"
+        url:"https://mern-ecommerce-web-site.herokuapp.com/"
+    },
+    {
+        id: i++,
+        image:mi_clone,
+        name:"Mi Store Clone",
+        category: "MERN",
+        url:"https://mi-store-react-clone.netlify.app/"
     },
     {
         id: i++,
@@ -36,6 +44,13 @@ const Menu = [
         name:"Lead Tracker",
         category: "JavaScript",
         url:"https://github.com/rahul-612/Lead-Tracker-Chrome-Extension-"
+    },
+    {
+        id: i++,
+        image:basic_mern,
+        name:"Basic MERN App",
+        category: "MERN",
+        url:"https://mern-basic-app.herokuapp.com/"
     },
     {
         id: i++,

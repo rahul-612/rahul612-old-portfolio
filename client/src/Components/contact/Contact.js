@@ -4,10 +4,12 @@ import '../utility/observer.js'
 import useOnScreen from '../utility/observer'
 import isActive from '../utility/isActive';
 import { useHistory } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const contact = () => {
     const history = useHistory();
-    const [alert,setAlert]=useState(false)
+    const [alert, setAlert] = useState(false)
     const [setRef, visible] = useOnScreen({ threshold: 0.2, triggerOnce: true });
     const [fdata, setFdata] = useState({
         name: "",
@@ -40,19 +42,40 @@ const contact = () => {
         });
 
         const data = await res.json();
-
-        if (data.status === 422 || !data) {
+        console.log(data.status)
+        if (data.status === 422 || !data || !name || !email || !msg) {
             // window.alert("Please Try Again!");
-            setAlert(false)
-            alertShow();
-            setTimeout(function(){ alertFade() }, 4000);
-            console.log("Please Try Again!");
+            // setAlert(false)
+            // alertShow();
+            // setTimeout(function(){ alertFade() }, 4000);
+            // console.log("Please Try Again!");
+
+            toast.error('Please Try Again!', {
+                position: "bottom-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
         } else {
             // window.alert("Message Sent Successfull");
-            setAlert(true)
-            alertShow();
-            setTimeout(function(){ alertFade() }, 4000);
-            console.log("Message Sent Successfull");
+            // setAlert(true)
+            // alertShow();
+            toast.success('Message sent successfully!', {
+                position: "bottom-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+
+
+            // setTimeout(function(){ alertFade() }, 4000);
+            // console.log("Message Sent Successfull");
 
             history.push('/')
         }
@@ -93,23 +116,37 @@ const contact = () => {
                         <input type="submit" name="" value="Submit" onClick={sendData} />
                     </form>
                 </div>
-                <div className="alert fade-in flex">
+                {/* custom alert box */}
+                {/*  <div className="alert fade-in flex">
                     <button>
                         <i className="fas fa-times" onClick={alertFade}></i>
                     </button>
                     <h2>{alert?'Sent Successfully':'Something went wrong'}</h2>
                     {alert?<i className="far fa-2x success fa-check-circle"></i>:<i class="far fa-2x fail fa-times-circle"></i>}
-                </div>
+                </div> */}
+                <ToastContainer
+                    position="bottom-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="dark"
+                />
+
             </section>
         </>
     )
 }
 
-const alertFade = () => {
-    document.querySelector('.alert').classList.add('fade-in')
-}
-const alertShow = () => {
-    document.querySelector('.alert').classList.remove('fade-in')
-}
+// const alertFade = () => {
+//     document.querySelector('.alert').classList.add('fade-in')
+// }
+// const alertShow = () => {
+//     document.querySelector('.alert').classList.remove('fade-in')
+// }
 
 export default contact;

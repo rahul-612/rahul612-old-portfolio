@@ -2,8 +2,8 @@ const dotenv=require("dotenv");
 const express=require("express");
 const app=express();
 dotenv.config({path:'./config.env'});
-require('./db/conn');
-const User=require('./model/mailSchema')
+// require('./db/conn');
+// const User=require('./model/mailSchema')
 const port=process.env.PORT || 5000;
 
 app.use(express.json());
