@@ -20,6 +20,9 @@ import basic_mern from '../portfolio/imgs/basic-mern.jpg';
 import restful_api from './imgs/restful_api.jpg';
 import ecomm from "./imgs/ecomm.jpg";
 import mi_clone from "./imgs/mi_clone.jpg"
+import social_media from "./imgs/social-media.jpg"
+
+
 
 let i=1;
 
@@ -30,6 +33,13 @@ const Menu = [
         name:"Ecommerce",
         category: "MERN",
         url:"https://mern-ecommerce-web-site.herokuapp.com/"
+    },
+    {
+        id: i++,
+        image:social_media,
+        name:"Social Media",
+        category: "MERN",
+        url:"https://rahul612-social-media-app.herokuapp.com"
     },
     {
         id: i++,
