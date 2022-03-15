@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.63d73969.chunk.css",
-    "main.js": "/static/js/main.b7a809c2.chunk.js",
-    "main.js.map": "/static/js/main.b7a809c2.chunk.js.map",
+    "main.js": "/static/js/main.5afa3e6b.chunk.js",
+    "main.js.map": "/static/js/main.5afa3e6b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.71c5bbf3.js",
     "runtime-main.js.map": "/static/js/runtime-main.71c5bbf3.js.map",
     "static/css/2.f4c56af9.chunk.css": "/static/css/2.f4c56af9.chunk.css",
@@ -32,6 +32,7 @@
     "static/media/postman.19ca0414.jpg": "/static/media/postman.19ca0414.jpg",
     "static/media/restful_api.d7ab5f78.jpg": "/static/media/restful_api.d7ab5f78.jpg",
     "static/media/snake.c8866f49.jpg": "/static/media/snake.c8866f49.jpg",
+    "static/media/social-media.0ea1651c.jpg": "/static/media/social-media.0ea1651c.jpg",
     "static/media/special_effects.93913262.jpg": "/static/media/special_effects.93913262.jpg",
     "static/media/todo.735ae1a6.jpg": "/static/media/todo.735ae1a6.jpg",
     "static/media/weather_app.1f6e34c1.jpg": "/static/media/weather_app.1f6e34c1.jpg"
@@ -41,6 +42,6 @@
     "static/css/2.f4c56af9.chunk.css",
     "static/js/2.3466c455.chunk.js",
     "static/css/main.63d73969.chunk.css",
-    "static/js/main.b7a809c2.chunk.js"
+    "static/js/main.5afa3e6b.chunk.js"
   ]
 }
