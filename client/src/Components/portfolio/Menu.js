@@ -21,6 +21,8 @@ import restful_api from './imgs/restful_api.jpg';
 import ecomm from "./imgs/ecomm.jpg";
 import mi_clone from "./imgs/mi_clone.jpg"
 import social_media from "./imgs/social-media.jpg"
+import chat_react from "./imgs/chat_react.jpg";
+import resume from "./imgs/resume.jpg";
 
 
 
@@ -40,6 +42,20 @@ const Menu = [
         name:"Social Media",
         category: "MERN",
         url:"https://rahul612-social-media-app.herokuapp.com"
+    },
+    {
+        id: i++,
+        image:chat_react,
+        name:"Chat App",
+        category: "ReactJS",
+        url:"https://rahul612-chatapp.netlify.app/"
+    },
+    {
+        id: i++,
+        image:resume,
+        name:"Resume Builder",
+        category: "ReactJS",
+        url:"https://rahul612-resume-builder.netlify.app/"
     },
     {
         id: i++,
