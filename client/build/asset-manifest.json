@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.63d73969.chunk.css",
-    "main.js": "/static/js/main.28c42cd3.chunk.js",
-    "main.js.map": "/static/js/main.28c42cd3.chunk.js.map",
+    "main.js": "/static/js/main.19513a07.chunk.js",
+    "main.js.map": "/static/js/main.19513a07.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.71c5bbf3.js",
     "runtime-main.js.map": "/static/js/runtime-main.71c5bbf3.js.map",
     "static/css/2.f4c56af9.chunk.css": "/static/css/2.f4c56af9.chunk.css",
@@ -22,6 +22,7 @@
     "static/media/cv_screener.eeec3c6a.jpg": "/static/media/cv_screener.eeec3c6a.jpg",
     "static/media/drag_drop.1bc0b096.jpg": "/static/media/drag_drop.1bc0b096.jpg",
     "static/media/ecomm.31db0e14.jpg": "/static/media/ecomm.31db0e14.jpg",
+    "static/media/expense_tracker.67ffc7be.jpg": "/static/media/expense_tracker.67ffc7be.jpg",
     "static/media/food_delivery.f1b29acd.jpg": "/static/media/food_delivery.f1b29acd.jpg",
     "static/media/keep_clone.3ea03c47.jpg": "/static/media/keep_clone.3ea03c47.jpg",
     "static/media/lead_tracker.ff1e4f44.jpg": "/static/media/lead_tracker.ff1e4f44.jpg",
@@ -42,6 +43,6 @@
     "static/css/2.f4c56af9.chunk.css",
     "static/js/2.3466c455.chunk.js",
     "static/css/main.63d73969.chunk.css",
-    "static/js/main.28c42cd3.chunk.js"
+    "static/js/main.19513a07.chunk.js"
   ]
 }
