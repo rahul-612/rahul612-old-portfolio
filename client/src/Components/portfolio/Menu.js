@@ -46,7 +46,7 @@ const Menu = [
     },
     {
         id: i++,
-        image:expense_tracker,
+        image:expense,
         name:"Expense Tracker With Voice Command",
         category: "ReactJS",
         url:"https://rahul612-expense-tracker.netlify.app/"
