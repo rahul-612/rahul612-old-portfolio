@@ -35,7 +35,7 @@ const Menu = [
         image:ecomm,
         name:"Ecommerce",
         category: "MERN",
-        url:"https://mern-ecommerce-web-site.herokuapp.com/"
+        url:"https://easybazaar.herokuapp.com/"
     },
     {
         id: i++,
