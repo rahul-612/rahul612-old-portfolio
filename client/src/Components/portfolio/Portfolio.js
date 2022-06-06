@@ -12,7 +12,7 @@ export const Portfolio = () => {
     return (
         <>
         <section id='portfolio' className='portfolio flex' >
-            <h1 className={visible?"port_head appear fade-in h_ani":"port_head fade-in"} ref={setRef}>Rahul {visible?isActive(visible,'portfolioNavItem'):null}
+            <h1 className={visible?"port_head appear fade-in h_ani":"port_head fade-in"} ref={setRef}>Projects {visible?isActive(visible,'portfolioNavItem'):null}
             </h1>
             <div className={visible?"projects appear fade-in":"projects fade-in"} ref={setRef}>
                 <Project/>
