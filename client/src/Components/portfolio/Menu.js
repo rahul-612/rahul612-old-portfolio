@@ -33,7 +33,7 @@ const Menu = [
     {
         id: i++,
         image:ecomm,
-        name:"Ecommerce App",
+        name:"Ecommerce",
         category: "MERN",
         url:"https://easybazaar.herokuapp.com"
     },
